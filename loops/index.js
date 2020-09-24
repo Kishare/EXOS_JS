@@ -2,7 +2,7 @@
 
 /* Exercice 1 */
 
-//     var toMultiply = [1, 2, 3, 5, 8];
+    var toMultiply = [1, 2, 3, 5, 8];
 
     for(var key in toMultiply){
         for(var i = 1; i <= 10; i++){
