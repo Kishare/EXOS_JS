@@ -71,9 +71,15 @@ if(choice === 'prendre'){
 
 /* Exercice 5 */
 
-??
+var exo5 = function exo5 (nbr) {
+    if (!nbr) {
+        return false;
+    }
+    return true;
+}
 
 // Exercice 6
+
 var ternaire = ternaire != undefined ? "cette variable n'existe pas" : 42;
 
 /* Exercice 7 */

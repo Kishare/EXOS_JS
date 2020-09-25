@@ -86,4 +86,41 @@ console.log(multi5);
 
 /* Exercice 7 */
 
+var store = {
+    tShirt : {
+        sizes: ['XS','S','M','L','XL','XXL'],
+        prices: [10, 11, 12, 13, 14, 15]
+    },
+    dress : {
+        sizes: ['XS','S','M','L','XL','XXL'],
+        prices: [10, 11, 12, 13, 14, 15]
+    }
+}
+var storeKeys = Object.keys(store)
+var results = {}
+storeKeys.forEach(function(nameProduct) {
+    var product = store[nameProduct]
+    product.sizes.forEach(function(size, index) {
+        var price = product.prices[index]
+        var tva = (price*20/100) + price
+        var item = {[size]: [price, [tva]]}
+        if (!results[nameProduct]) {
+            results[nameProduct] = []
+        }
+        results[nameProduct].push(item)
+    })
+})
+console.log(results);
 
+// Exercice 8
+
+'use strict';
+var input = document.createElement('select')
+var years = (new Date().getFullYear() - 1980)
+for (var i = 0; i <= years; i += 1) {
+    var option = document.createElement('option')
+    option.value = i
+    option.textContent = (1980 + i)
+    input.appendChild(option)
+}
+document.body.appendChild(input)
